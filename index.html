@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Animations</title>
+    <style>
+
+    body {
+        background-color: rgb(75, 65, 65);
+    }
+
+    .imagebox {
+        position: relative;
+        background-color: hsl(41, 89%, 53%);
+        border: 2px solid black;
+        text-align: center;
+    }
+
+    img {
+        padding: 5px;
+    }
+    
+    .sliding_CIT {
+        position: absolute;
+        width: 100px;
+        height: 100px;            
+        top: 300px;
+        background-image:url(CIT.jpg);
+        background-size: contain;            
+        background-repeat: no-repeat;
+        animation-duration: 3s;
+        animation-name: slide;
+        animation-iteration-count: infinite;
+    }
+
+    @keyframes slide {
+        from { left: 0; }
+        to {left: 92.5%; }
+    }
+
+    </style>
+</head>
+<body>
+    <div class="imagebox">
+        <img src="purdue_cit_cover.jpg" alt="Purdue CIT">
+    </div>
+    <div class="sliding_CIT"></div>
+
+    </div>
+</body>
+</html>
